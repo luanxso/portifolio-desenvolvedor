@@ -3,115 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Developer</title>
+    <title>Portfólio | Desenvolvedor Iniciante</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="navbar">
-        <div class="logo">Georgy</div>
+        <div class="logo">Luan.Dev</div>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Projects</a>
-            <a href="#">Services</a>
-            <a href="#">Resume</a>
-            <a href="#" class="btn-small">Contact Me</a>
+            <a href="#home">Início</a>
+            <a href="#about">Sobre</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#projects">Projetos</a>
+            <a href="#" class="btn-small">Contato</a>
         </nav>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <img src="https://i.ibb.co/4sTFkGm/avatar.png" class="avatar" alt="Avatar">
-        <h1>Georgy Georgy</h1>
-        <p class="subtitle">Data Sorcerer ⚡</p>
-        <p class="hero-text">
-            Apaixonado por data science, IA e machine learning. Criando soluções modernas
-            usando tecnologia avançada para mover o mundo.
-        </p>
-        <a href="#" class="btn-primary">Contrate-me</a>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="badge">Estudante de T.I.</span>
+            <h1>Luan Miguel</h1>
+            <p class="subtitle">Em busca da 1ª Oportunidade como Desenvolvedor</p>
+            <p class="hero-text">
+                Estudante de curso técnico apaixonado por tecnologia. 
+                Possuo forte base em lógica de programação e estou pronto para 
+                transformar linhas de código em soluções reais dentro da sua empresa.
+            </p>
+            <div class="buttons">
+                <a href="#" class="btn-primary">Ver Projetos</a>
+                <a href="#" class="btn-outline">Meu GitHub</a>
+            </div>
+        </div>
+        <div class="hero-img">
+            <img src="https://i.ibb.co/4sTFkGm/avatar.png" class="avatar" alt="Foto de Perfil">
+        </div>
     </section>
 
-    <!-- ABOUT ME -->
-    <section class="about">
-        <h2>About Me</h2>
+    <section id="about" class="about">
+        <h2>Sobre Mim</h2>
         <p>
-            Sou um desenvolvedor apaixonado por inovação, automação e soluções inteligentes.
-            Trabalho com análise de dados, UI/UX, front-end e conceitos modernos de IA.
+            Atualmente cursando Técnico em Desenvolvimento de Sistemas. Minha jornada é focada 
+            em aprender como as coisas funcionam por trás da interface. Tenho facilidade com 
+            lógica, gosto de resolver problemas e busco um ambiente onde possa colaborar e 
+            evoluir profissionalmente.
         </p>
-        <a href="#" class="btn-outline">Download Resume</a>
     </section>
 
-    <!-- WHAT I DO -->
-    <section class="services">
-        <h2>What I Do</h2>
+    <section id="skills" class="services">
+        <h2>O Que Estou Estudando</h2>
+        <p class="section-desc">Minhas competências técnicas e fundamentos:</p>
 
         <div class="cards">
             <div class="card">
-                <h3>Data Analysis</h3>
-                <p>Transformo dados brutos em informações valiosas para decisões estratégicas.</p>
+                <h3>Lógica de Programação</h3>
+                <p>Domínio de algoritmos, estruturas de dados e pensamento estruturado para resolução de problemas.</p>
             </div>
 
             <div class="card">
-                <h3>UI/UX Design</h3>
-                <p>Criação de interfaces modernas com excelente experiência de usuário.</p>
+                <h3>Banco de Dados</h3>
+                <p>Criação de tabelas, relacionamentos e consultas SQL básicas para organização da informação.</p>
             </div>
 
             <div class="card">
-                <h3>Web Development</h3>
-                <p>Sites completos e performáticos com HTML, CSS e JavaScript.</p>
+                <h3>Desenvolvimento Web</h3>
+                <p>Construção de interfaces e estruturação de páginas utilizando HTML5, CSS3 e JavaScript básico.</p>
             </div>
 
             <div class="card">
-                <h3>AI Creation</h3>
-                <p>Modelos inteligentes, automações e ferramentas usando IA moderna.</p>
+                <h3>Ferramentas</h3>
+                <p>Familiaridade com Git para versionamento de código, VS Code e metodologias ágeis escolares.</p>
             </div>
         </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section class="projects">
-        <h2>Projects</h2>
+    <section id="projects" class="projects">
+        <h2>Projetos Acadêmicos</h2>
+        <p class="section-desc">Alguns trabalhos realizados durante o curso e estudos pessoais:</p>
 
         <div class="project-grid">
             <div class="project">
-                <img src="https://i.ibb.co/FY9dq2M/p1.png" alt="">
-                <p>Project name/description</p>
+                <div class="project-img-holder"></div> <h3>Sistema de Cadastro</h3>
+                <p>CRUD simples feito em sala de aula para gerenciar usuários.</p>
+                <span class="tech-tag">Java/C#</span>
             </div>
 
             <div class="project">
-                <img src="https://i.ibb.co/FY9dq2M/p1.png" alt="">
-                <p>Project name/description</p>
+                <div class="project-img-holder"></div>
+                <h3>Calculadora de Médias</h3>
+                <p>Aplicação para cálculo de notas escolares com validação.</p>
+                <span class="tech-tag">JavaScript</span>
             </div>
 
             <div class="project">
-                <img src="https://i.ibb.co/FY9dq2M/p1.png" alt="">
-                <p>Project name/description</p>
-            </div>
-
-            <div class="project">
-                <img src="https://i.ibb.co/s6M4R14/p2.png" alt="">
-                <p>Educational Platform</p>
-            </div>
-
-            <div class="project">
-                <img src="https://i.ibb.co/s6M4R14/p2.png" alt="">
-                <p>Educational Platform</p>
-            </div>
-
-            <div class="project">
-                <img src="https://i.ibb.co/s6M4R14/p2.png" alt="">
-                <p>Educational Platform</p>
+                <div class="project-img-holder"></div>
+                <h3>Landing Page</h3>
+                <p>Página estática responsiva criada para treinar CSS e HTML.</p>
+                <span class="tech-tag">HTML/CSS</span>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT -->
     <section class="contact">
-        <h2>Get In Touch</h2>
-        <p>Entre em contato para ideias, projetos ou colaborações.</p>
-        <a href="#" class="btn-primary">Enviar Mensagem</a>
+        <h2>Vamos conversar?</h2>
+        <p>Estou disponível para estágios ou vagas júnior. Terei prazer em me apresentar.</p>
+        <a href="mailto:luanmiguel0101@email.com" class="btn-primary">Enviar E-mail</a>
     </section>
+
+    <footer>
+        <p>&copy; 2025 Luan Miguel - Desenvolvido por mim.</p>
+    </footer>
 
 </body>
 </html>

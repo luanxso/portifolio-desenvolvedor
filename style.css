@@ -1,174 +1,305 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
-:root {
-    --bg: #0f0f11;
-    --card: #151517;
-    --text: #dcdcdc;
-    --accent: #4AB7FF;
-}
-
+/* RESET BÁSICO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif; /* Fonte limpa e profissional */
 }
 
 body {
-    background: var(--bg);
-    color: var(--text);
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
 }
 
 /* NAVBAR */
 .navbar {
-    width: 100%;
-    padding: 20px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1.5rem 5%;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #eaeaea; /* Linha sutil para separar */
 }
 
-.navbar .logo {
-    font-size: 22px;
+.logo {
+    font-size: 1.5rem;
     font-weight: 700;
+    color: #2563eb; /* Azul profissional */
 }
 
 .navbar nav a {
-    margin-left: 24px;
     text-decoration: none;
-    color: var(--text);
-    font-size: 15px;
+    color: #555;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
 }
 
-.btn-small {
+.navbar nav a:hover {
+    color: #2563eb;
+}
+
+.navbar .btn-small {
+    background-color: #2563eb;
+    color: white;
     padding: 8px 16px;
-    border: 1px solid var(--accent);
-    border-radius: 8px;
-    color: var(--accent);
+    border-radius: 6px;
 }
 
-/* HERO */
+.navbar .btn-small:hover {
+    color: white;
+    background-color: #1d4ed8;
+}
+
+/* HERO SECTION */
 .hero {
-    text-align: center;
-    margin-top: 60px;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 5%;
+    min-height: 80vh;
+    background-color: #ffffff;
 }
 
-.avatar {
-    width: 130px;
-    border-radius: 50%;
+.hero-content {
+    max-width: 600px;
+}
+
+.badge {
+    background-color: #eff6ff;
+    color: #2563eb;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .hero h1 {
-    margin-top: 20px;
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 3rem;
+    margin: 1rem 0 0.5rem 0;
+    color: #111;
 }
 
 .subtitle {
-    margin: 6px;
-    color: var(--accent);
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
 }
 
 .hero-text {
-    max-width: 560px;
-    margin: 15px auto;
-    opacity: 0.9;
+    color: #555;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
 }
 
+.hero-img .avatar {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f3f4f6; /* Borda cinza clara */
+}
+
+/* BOTÕES GERAIS */
 .btn-primary {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 28px;
-    background: var(--accent);
-    color: #000;
-    border-radius: 10px;
     text-decoration: none;
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
     font-weight: 600;
+    display: inline-block;
+    transition: background 0.3s;
 }
 
-/* ABOUT */
-.about {
-    text-align: center;
-    max-width: 650px;
-    margin: 80px auto;
-}
-
-.about h2 {
-    font-size: 26px;
-    margin-bottom: 10px;
+.btn-primary:hover {
+    background-color: #1d4ed8;
 }
 
 .btn-outline {
-    border: 1px solid var(--accent);
-    padding: 10px 20px;
-    border-radius: 10px;
-    color: var(--accent);
-    display: inline-block;
-    margin-top: 18px;
     text-decoration: none;
+    border: 2px solid #e5e7eb;
+    color: #333;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-left: 10px;
+    transition: all 0.3s;
 }
 
-/* WHAT I DO */
+.btn-outline:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+/* SEÇÃO SOBRE */
+.about {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: #f9fafb; /* Cinza muito claro para diferenciar */
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* SEÇÃO SKILLS (CARDS) */
 .services {
-    padding: 60px;
+    padding: 4rem 5%;
     text-align: center;
 }
 
-.services h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
+.section-desc {
+    color: #666;
+    margin-bottom: 3rem;
 }
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(4, 260px);
-    justify-content: center;
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
 }
 
 .card {
-    background: var(--card);
-    padding: 25px;
-    border-radius: 15px;
+    background: white;
+    padding: 2rem;
+    border: 1px solid #e5e7eb; /* Borda fina */
+    border-radius: 12px;
     text-align: left;
-    border: 1px solid #1c1c1f;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Sombra suave */
+    border-color: #2563eb;
 }
 
 .card h3 {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
+    color: #111;
 }
 
-/* PROJECTS */
+.card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* PROJETOS */
 .projects {
-    padding: 60px;
+    padding: 4rem 5%;
+    background-color: #f9fafb;
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.projects .section-desc {
     text-align: center;
 }
 
 .project-grid {
-    margin-top: 25px;
     display: grid;
-    grid-template-columns: repeat(3, 320px);
-    justify-content: center;
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-.project img {
+.project {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.project-img-holder {
     width: 100%;
-    border-radius: 10px;
+    height: 180px;
+    background-color: #e5e7eb; /* Placeholder cinza */
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .project p {
-    margin-top: 10px;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
 }
 
-/* CONTACT */
+.tech-tag {
+    font-size: 0.8rem;
+    background-color: #eff6ff;
+    color: #2563eb;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* CONTATO */
 .contact {
-    padding: 80px 20px;
+    padding: 5rem 5%;
     text-align: center;
+    background-color: white;
 }
 
 .contact h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-top: 1px solid #eaeaea;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVIDADE CELULAR */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .hero-content {
+        margin-top: 2rem;
+    }
+    
+    .navbar nav {
+        display: none; /* Em um projeto real, faríamos um menu hambúrguer aqui */
+    }
+
+    .hero-img .avatar {
+        width: 200px;
+        height: 200px;
+    }
 }
